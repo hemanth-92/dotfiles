@@ -1,7 +1,0 @@
-2024/02/12-20:07:53.089 486b Creating DB /home/etto/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_harkirat.classx.co.in_0.indexeddb.leveldb since it was missing.
-2024/02/12-20:07:53.094 486b Reusing MANIFEST /home/etto/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_harkirat.classx.co.in_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/12-20:07:53.103 487a Level-0 table #5: started
-2024/02/12-20:07:53.105 487a Level-0 table #5: 679 bytes OK
-2024/02/12-20:07:53.106 487a Delete type=0 #3
-2024/02/12-20:07:53.107 487a Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2024/02/12-20:07:53.400 4870 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
