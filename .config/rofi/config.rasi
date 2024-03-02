@@ -52,8 +52,8 @@ window {
 
     // Style Values
     width:                      50%;
-    /*background-color:           #00000020;*/
-    background-color:           @background;
+    background-color:           #00000020;
+    /*background-color:           @background;*/
 }
 
 /* ----- Main Box ----- */
