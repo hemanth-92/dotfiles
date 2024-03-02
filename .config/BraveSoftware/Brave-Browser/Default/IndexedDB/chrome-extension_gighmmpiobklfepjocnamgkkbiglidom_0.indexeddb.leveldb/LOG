@@ -1,0 +1,7 @@
+2024/02/15-17:29:48.913 4ec Reusing MANIFEST /home/etto/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_gighmmpiobklfepjocnamgkkbiglidom_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/15-17:29:48.914 4ec Recovering log #3
+2024/02/15-17:29:48.915 4ec Reusing old log /home/etto/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_gighmmpiobklfepjocnamgkkbiglidom_0.indexeddb.leveldb/000003.log 
+2024/02/15-18:45:13.000 4c0 Level-0 table #5: started
+2024/02/15-18:45:13.002 4c0 Level-0 table #5: 11425 bytes OK
+2024/02/15-18:45:13.005 4c0 Delete type=0 #3
+2024/02/15-18:45:13.006 4c0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

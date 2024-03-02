@@ -1,0 +1,827 @@
+{
+   "abu_desktop_info": {
+      "message": "AdBlocking hanteras av \u003Cstrong>AdBlocker Ultimate för Windows\u003C/strong>. Du kan dock fortfarande använda denna meny till att hantera din vitlista eller för att manuellt blockera vissa annonser."
+   },
+   "abu_product_mac": {
+      "message": "AdBlocker Ultimate för Mac"
+   },
+   "abu_product_windows": {
+      "message": "AdBlocker Ultimate för Windows"
+   },
+   "abu_subscribe_confirm_enable": {
+      "message": "AdBlocker Ultimate: Vill du aktivera prenumerationen av $1?"
+   },
+   "abu_subscribe_confirm_import": {
+      "message": "AdBlocker Ultimate: Vill du importera regler från $1 till ditt användarfilter?"
+   },
+   "abu_subscribe_confirm_import_finished_text": {
+      "message": "AdBlocker Ultimate har importerat regler till användarfiltret. Antal importerade regler: $1"
+   },
+   "abu_subscribe_confirm_import_finished_title": {
+      "message": "Importeringen har slutförts"
+   },
+   "alert_popup_filter_enabled_text": {
+      "message": "&quot;$1&quot; har aktiverats"
+   },
+   "alert_popup_filter_enabled_title": {
+      "message": "Filter aktiveras automatiskt"
+   },
+   "all_ads_out": {
+      "message": "Och alla irriterande annonser är borta!"
+   },
+   "all_rights_reserved": {
+      "message": "Alla rättigheter reserverade"
+   },
+   "assistant_another_element": {
+      "message": "Välj ett annat element"
+   },
+   "assistant_apply_rule_to_all_sites": {
+      "message": "Tillämpa denna regel till alla webbsidor"
+   },
+   "assistant_block": {
+      "message": "Blockera"
+   },
+   "assistant_block_by_reference": {
+      "message": "Blockera element med URL"
+   },
+   "assistant_block_element": {
+      "message": "Blockera element"
+   },
+   "assistant_block_element_by_url": {
+      "message": "Blockera element med URL"
+   },
+   "assistant_block_element_explain": {
+      "message": "Regelinställning för blockering av element"
+   },
+   "assistant_block_similar": {
+      "message": "Blockera liknande element"
+   },
+   "assistant_extended_settings": {
+      "message": "Avancerade inställningar..."
+   },
+   "assistant_preview": {
+      "message": "Förhandsvisa"
+   },
+   "assistant_preview_end": {
+      "message": "Slutför förhandsvisning"
+   },
+   "assistant_preview_start": {
+      "message": "Förhandsvisa"
+   },
+   "assistant_rule_parameters": {
+      "message": "Regelparametrar"
+   },
+   "assistant_select_element": {
+      "message": "Markeringsläge"
+   },
+   "assistant_select_element_cancel": {
+      "message": "avbryt markeringsläget"
+   },
+   "assistant_select_element_ext": {
+      "message": "Klicka på valfritt element på sidan eller "
+   },
+   "badge_download_now": {
+      "message": "Ladda ned nu"
+   },
+   "badge_learn_more": {
+      "message": "Läs mer"
+   },
+   "badge_windows_ifno": {
+      "message": "En enda annonsblockerare som blockerar annonser och onlinespårare över alla Windows-applikationer."
+   },
+   "block_even_more_ads": {
+      "message": "Blockera ännu fler annonser"
+   },
+   "browser_action_ads_blocked": {
+      "message": "Blockerade annonser"
+   },
+   "browser_action_popup_block_element": {
+      "message": "Blockera element"
+   },
+   "browser_action_popup_disabled_on_site": {
+      "message": "\u003Cstrong>Inaktiverat\u003C/strong> på denna webbsida"
+   },
+   "browser_action_popup_donate": {
+      "message": "Donera"
+   },
+   "browser_action_popup_enabled_on_site": {
+      "message": "\u003Cstrong>Aktiverat\u003C/strong> på denna webbsida"
+   },
+   "browser_action_popup_in_total": {
+      "message": "\u003Cstrong>$1\u003C/strong> totalt"
+   },
+   "browser_action_popup_on_this_page": {
+      "message": "\u003Cstrong>$1\u003C/strong> på denna webbsida"
+   },
+   "browser_action_popup_options": {
+      "message": "Alternativ"
+   },
+   "browser_action_popup_show_number_in_icon": {
+      "message": "Visa antal i ikonen"
+   },
+   "close": {
+      "message": "Stäng"
+   },
+   "contact_us": {
+      "message": "Kontakta oss"
+   },
+   "context_abuse_site": {
+      "message": "Skicka ett klagomål om denna webbsida..."
+   },
+   "context_ads_has_been_removed": {
+      "message": "Annonser har tagits bort från denna sida"
+   },
+   "context_ads_has_been_removed_by_abu": {
+      "message": "Skyddad av $1"
+   },
+   "context_block_site_ads": {
+      "message": "Blockera annons på denna webbsida..."
+   },
+   "context_block_site_element": {
+      "message": "Blockera element..."
+   },
+   "context_open_settings": {
+      "message": "Inställningar för AdBlocker Ultimate..."
+   },
+   "context_site_exception": {
+      "message": "Denna webbsida finns bland undantagen"
+   },
+   "context_site_filtering_disabled": {
+      "message": "AdBlocker Ultimate kan inte köras på denna domän"
+   },
+   "context_site_filtering_off": {
+      "message": "Inaktivera filtrering på denna webbsida"
+   },
+   "context_site_filtering_on": {
+      "message": "Aktivera filtrering på denna webbsida"
+   },
+   "context_site_protection_disabled": {
+      "message": "AdBlocker Ultimate-skydd är pausat"
+   },
+   "context_update_antibanner_filters": {
+      "message": "Kolla efter filteruppdateringar"
+   },
+   "description": {
+      "message": "Fri och förbättrad annonsblockerare. Tar bort ALLA annonser. Inga \"acceptabla\" annonser eller vitlistade annonsörer, blockerar spårning och skadliga program!"
+   },
+   "description_blocked": {
+      "message": "Blockerade annonser på denna sida: $1"
+   },
+   "desktop_app_is_running": {
+      "message": "Skrivbordsappen körs"
+   },
+   "filter_description_abpvn_list": {
+      "message": "Tar bort annonser från vietnamesiska webbplatser."
+   },
+   "filter_description_adblock_persian_list": {
+      "message": "Tar bort annonser från persiska webbplatser."
+   },
+   "filter_description_adblockid_list": {
+      "message": "Tar bort annonser från indonesiska och malaysiska webbplatser."
+   },
+   "filter_description_anti_circumvention": {
+      "message": "Filterlista designad för att bekämpa kringgående annonser."
+   },
+   "filter_description_bulgarian_list": {
+      "message": "Tar bort annonser från bulgariska webbplatser."
+   },
+   "filter_description_easylist_china": {
+      "message": "Tar bort annonser från kinesiska webbplatser."
+   },
+   "filter_description_easylist_czech_and_slovak": {
+      "message": "Tar bort annonser från tjeckiska och slovakiska webbplatser."
+   },
+   "filter_description_easylist_dutch_easylist": {
+      "message": "Tar bort annonser från nederländska webbplatser."
+   },
+   "filter_description_easylist_germany_easylist": {
+      "message": "Tar bort annonser från tyska webbplatser."
+   },
+   "filter_description_easylist_italy": {
+      "message": "Tar bort annonser från italienska webbplatser."
+   },
+   "filter_description_easylist_polish": {
+      "message": "Tar bort annonser från polska webbplatser."
+   },
+   "filter_description_easylist_spanish": {
+      "message": "Tar bort annonser från spanska/portugisiska webbplatser."
+   },
+   "filter_description_estonian_list": {
+      "message": "Tar bort annonser från estniska webbplatser."
+   },
+   "filter_description_fanboys_annoyance_list": {
+      "message": "Blockerar alla irriterande i-sidan popups, kakor meddelanden och tredje part widgets, som avsevärt minskar sidan laddningstider använder detta filter och det kommer att blockera dem alla för dig."
+   },
+   "filter_description_fanboys_japanese": {
+      "message": "Tar bort annonser från japanska webbplatser."
+   },
+   "filter_description_fanboys_korean": {
+      "message": "Tar bort annonser från koreanska webbplatser."
+   },
+   "filter_description_fanboys_social_blocking_list": {
+      "message": "Tar bort integrationer med sociala medier"
+   },
+   "filter_description_fanboys_turkish": {
+      "message": "Tar bort annonser från turkiska webbplatser."
+   },
+   "filter_description_finnish_list": {
+      "message": "Tar bort annonser från Finska webbplatser."
+   },
+   "filter_description_frellwits_swedish_filter": {
+      "message": "Tar bort annonser från svenska webbplatser."
+   },
+   "filter_description_hufilter": {
+      "message": "Tar bort annonser från ungerska webbplatser."
+   },
+   "filter_description_latvian_list": {
+      "message": "Tar bort annonser från lettiska webbplatser."
+   },
+   "filter_description_liste_fr": {
+      "message": "Tar bort annonser från franska webbplatser."
+   },
+   "filter_description_nocoin": {
+      "message": "Förhindrar kryptomining i din webbläsare."
+   },
+   "filter_description_ruadlist_easylist": {
+      "message": "Tar bort annonser från ryska webbplatser."
+   },
+   "filter_description_ultimate_ad_filter": {
+      "message": "Detta är det bäst utförande allt-i-ett annonsfilter där ute, som blockerar annonser över hela webben. Den bygger på EasyList filter och förstärks ytterligare av vårt team."
+   },
+   "filter_description_ultimate_privacy_filter": {
+      "message": "Blockerar en omfattande lista med olika onlinespårare, räknare och webbanalysverktyg. Baserat på integritetslistan EasyList och har uppgraderats av vårt team."
+   },
+   "filter_description_ultimate_security_filter": {
+      "message": "Detta filter blockerar skadliga domäner. Baserat på Online Skadlig URL Blocklist filter och ytterligare uppdaterad och modifierad av vårt team."
+   },
+   "filter_download_loading": {
+      "message": "Var god vänta medan filterdatabasen läser in..."
+   },
+   "filter_download_title": {
+      "message": "Filterdatabasen läser in..."
+   },
+   "filter_group_ad_blocking": {
+      "message": "Annonsblockering"
+   },
+   "filter_group_custom_filters": {
+      "message": "Anpassade filter"
+   },
+   "filter_group_language_specific": {
+      "message": "Språkspecifik"
+   },
+   "filter_group_privacy": {
+      "message": "Integritet"
+   },
+   "filter_group_security": {
+      "message": "Säkerhet"
+   },
+   "filter_name_abpvn_list": {
+      "message": "ABPVN lista"
+   },
+   "filter_name_adblock_persian_list": {
+      "message": "Adblock-Persisk lista"
+   },
+   "filter_name_adblockid_list": {
+      "message": "AdBlockID"
+   },
+   "filter_name_anti_circumvention": {
+      "message": "Anti-kringgående"
+   },
+   "filter_name_bulgarian_list": {
+      "message": "Bulgarisk lista"
+   },
+   "filter_name_easylist_china": {
+      "message": "EasyList Kina"
+   },
+   "filter_name_easylist_czech_and_slovak": {
+      "message": "EasyList Tjeckiska & Slovakiska"
+   },
+   "filter_name_easylist_dutch_easylist": {
+      "message": "EasyList Nederländskt"
+   },
+   "filter_name_easylist_germany_easylist": {
+      "message": "EasyList Tyskland"
+   },
+   "filter_name_easylist_italy": {
+      "message": "EasyList Italien"
+   },
+   "filter_name_easylist_polish": {
+      "message": "Easylist Polska"
+   },
+   "filter_name_easylist_spanish": {
+      "message": "EasyList Spanska"
+   },
+   "filter_name_estonian_list": {
+      "message": "Estnisk lista"
+   },
+   "filter_name_fanboys_annoyance_list": {
+      "message": "Fanboys Annoyance List"
+   },
+   "filter_name_fanboys_japanese": {
+      "message": "Fanboys japanska"
+   },
+   "filter_name_fanboys_korean": {
+      "message": "Fanboys koreanska"
+   },
+   "filter_name_fanboys_social_blocking_list": {
+      "message": "Fanboys lista över sociala blockeringar"
+   },
+   "filter_name_fanboys_turkish": {
+      "message": "Fanboys turkiska"
+   },
+   "filter_name_finnish_list": {
+      "message": "Finsk lista"
+   },
+   "filter_name_frellwits_swedish_filter": {
+      "message": "Frellwits Svenskt filter."
+   },
+   "filter_name_hufilter": {
+      "message": "Hufilter - Den Ungerska Adblock listan"
+   },
+   "filter_name_latvian_list": {
+      "message": "Lettisk lista"
+   },
+   "filter_name_liste_fr": {
+      "message": "Fransk lista"
+   },
+   "filter_name_nocoin": {
+      "message": "NoCoin"
+   },
+   "filter_name_ruadlist_easylist": {
+      "message": "RuAdList"
+   },
+   "filter_name_ultimate_ad_filter": {
+      "message": "Ultimate Ad Filter"
+   },
+   "filter_name_ultimate_privacy_filter": {
+      "message": "Ultimat integritetsfilter"
+   },
+   "filter_name_ultimate_security_filter": {
+      "message": "Ultimat säkerhetsfilter"
+   },
+   "filter_rules_count": {
+      "message": "Antal filterregler"
+   },
+   "follow_us": {
+      "message": "Följ oss på"
+   },
+   "name": {
+      "message": "AdBlocker Ultimate"
+   },
+   "no": {
+      "message": "Nej"
+   },
+   "official_website": {
+      "message": "Officiell webbplats"
+   },
+   "options_about": {
+      "message": "Om"
+   },
+   "options_abu_is_disabled": {
+      "message": "AdBlocker Ultimate är inaktiverat för de listade domänerna nedan. Du kan lägga till en domän antingen via AdBlocker Ultimate-ikonen i adressfältet eller genom att skriva domänen (inte en URL) i fältet och klicka på knappen \"Lägg till domän\"."
+   },
+   "options_add": {
+      "message": "Lägg till"
+   },
+   "options_add_custom_filter": {
+      "message": "Lägg till anpassat filter"
+   },
+   "options_add_domain": {
+      "message": "Lägg till domän"
+   },
+   "options_add_filter": {
+      "message": "Lägg till filter"
+   },
+   "options_add_filter_subscription": {
+      "message": "Lägg till filterprenumeration"
+   },
+   "options_add_your_filters": {
+      "message": "Lägg till egna filter"
+   },
+   "options_anti_circumvention_desc": {
+      "message": "Denna funktion motverkar webbsidor från att visa meddelande om att du använder ett annonsblockerings program, när sidan upptäcker att du använder Adblock."
+   },
+   "options_anti_circumvention_title": {
+      "message": "Aktivera anti-kringgående "
+   },
+   "options_antibanner_info": {
+      "message": "Antal filterregler: $1"
+   },
+   "options_apply_changes": {
+      "message": "Verkställ ändringar"
+   },
+   "options_auto_activate_lang_filters_desc": {
+      "message": "Efter att några sidor har öppnats på ett språk kommer filtren för detta språk läggas till och aktiveras automatiskt."
+   },
+   "options_auto_activate_lang_filters_title": {
+      "message": "Aktivera språkspecifika filter automatiskt"
+   },
+   "options_check_for_updates": {
+      "message": "Kolla efter filteruppdateringar"
+   },
+   "options_clear_filter": {
+      "message": "Rensa filter"
+   },
+   "options_confirm_filter_delete": {
+      "message": "Är du säker du vill radera detta filter?"
+   },
+   "options_custom": {
+      "message": "Anpassad"
+   },
+   "options_custom_filter_already_add": {
+      "message": "Filter med samma webbadress finns redan !"
+   },
+   "options_custom_filter_empty_url": {
+      "message": "Ange filtrets webbadress!"
+   },
+   "options_custom_filter_error": {
+      "message": "Fel uppstod när video laddades ned!"
+   },
+   "options_custom_filters": {
+      "message": "Anpassade filter"
+   },
+   "options_custom_rules": {
+      "message": "Anpassade regler"
+   },
+   "options_delete": {
+      "message": "Radera"
+   },
+   "options_do_you_like_abu": {
+      "message": "Gillar du AdBlocker Ultimate?"
+   },
+   "options_editor_desc": {
+      "message": "I den här listan kan du lägga till egna anpassade regler. Skapa dina egna annonsfilter och lägg till dem här."
+   },
+   "options_enable_context_menu_desc": {
+      "message": "Aktiverar en meny med åtgärder som dyker upp när du högerklickar på en webbplats."
+   },
+   "options_enable_context_menu_title": {
+      "message": "Aktivera högerklicksmeny"
+   },
+   "options_enable_only": {
+      "message": "Aktivera endast de filter du behöver. För många kan göra att din webbläsare inte fungerar riktigt."
+   },
+   "options_enabled": {
+      "message": "Aktiverad"
+   },
+   "options_enter_url_or_path": {
+      "message": "Ange giltig webbadress eller filsökväg"
+   },
+   "options_err_import_file": {
+      "message": "Fel uppstod när filen importerades!"
+   },
+   "options_err_no_txt_file": {
+      "message": "Endast .txt-filer är tillåtet!"
+   },
+   "options_export": {
+      "message": "Exportera"
+   },
+   "options_filter_list": {
+      "message": "Filterlistor"
+   },
+   "options_filter_list_location": {
+      "message": "Filterlistans plats:"
+   },
+   "options_filter_status_all": {
+      "message": "Alla"
+   },
+   "options_filter_status_disable": {
+      "message": "Inaktiverade"
+   },
+   "options_filter_version": {
+      "message": "Version $1. Uppdateras den $2 kl. $3."
+   },
+   "options_filters": {
+      "message": "Filter"
+   },
+   "options_filters_enabled": {
+      "message": "Aktiverade:"
+   },
+   "options_filters_enabled_and_more": {
+      "message": "$1 och $2 till"
+   },
+   "options_filters_updated": {
+      "message": "uppdaterade"
+   },
+   "options_general": {
+      "message": "Allmänt"
+   },
+   "options_help_translate": {
+      "message": "Hjälp oss med översättningen!"
+   },
+   "options_import": {
+      "message": "Importera"
+   },
+   "options_language_specific": {
+      "message": "Språkspecifik"
+   },
+   "options_last_uodate": {
+      "message": "Senast uppdaterade"
+   },
+   "options_modal_cancel": {
+      "message": "Avbryt"
+   },
+   "options_modal_homepage": {
+      "message": "Hemsida"
+   },
+   "options_new_filter": {
+      "message": "Nytt filter"
+   },
+   "options_no_custom_filters": {
+      "message": "Ledsen, men du har ännu inga anpassade filter"
+   },
+   "options_no_filters_enabled": {
+      "message": "Inga filter är aktiverade"
+   },
+   "options_number_icon_desc": {
+      "message": "Antalet blockerade annonser på varje sida kommer att visas i tilläggets ikon."
+   },
+   "options_out_of_date_lists": {
+      "message": "Utdaterade listor uppdateras periodiskt."
+   },
+   "options_please_choose": {
+      "message": "Välj en filterprenumeration från listan:"
+   },
+   "options_popup_update_error": {
+      "message": "Misslyckades att hämta uppdateringar. Försök igen senare."
+   },
+   "options_popup_update_not_found": {
+      "message": "Inga uppdateringar hittades"
+   },
+   "options_popup_update_title": {
+      "message": "Filter uppdaterades"
+   },
+   "options_popup_update_updated": {
+      "message": "\"$1\" uppdaterades till version $2"
+   },
+   "options_rate_us": {
+      "message": "Betygsätt oss"
+   },
+   "options_remove_selected": {
+      "message": "Ta bort markerade"
+   },
+   "options_search": {
+      "message": "Sök"
+   },
+   "options_settings": {
+      "message": "AdBlocker Ultimate"
+   },
+   "options_show_block_element": {
+      "message": "Visa alternativet \"Blockera element\" i högerklicksmenyn"
+   },
+   "options_show_useful_notifications": {
+      "message": "Visa användbara notifikationer"
+   },
+   "options_status_saved": {
+      "message": "Sparades"
+   },
+   "options_submit": {
+      "message": "Skicka"
+   },
+   "options_subscription_title": {
+      "message": "Prenumerationsrubrik:"
+   },
+   "options_title": {
+      "message": "Alternativ för AdBlocker Ultimate"
+   },
+   "options_update_now": {
+      "message": "Uppdatera nu"
+   },
+   "options_userfilter": {
+      "message": "Användarfilter"
+   },
+   "options_userfilter_add_rule": {
+      "message": "Lägg till ny regel"
+   },
+   "options_userfilter_clear": {
+      "message": "Rensa"
+   },
+   "options_userfilter_clear_confirm": {
+      "message": "Alla regler tas bort om användarfiltret rensas. Vill du verkligen rensa användarfiltret?"
+   },
+   "options_userfilter_description": {
+      "message": ""
+   },
+   "options_userfilter_export": {
+      "message": "Exportera"
+   },
+   "options_userfilter_import": {
+      "message": "Importera"
+   },
+   "options_want_abu_in_lang": {
+      "message": "Vill du ha AdBlocker Ultimate på ditt språk?"
+   },
+   "options_whitelist": {
+      "message": "Vitlista"
+   },
+   "options_whitelist_desc": {
+      "message": "Annonserna på webbplatserna som lades till i denna vitlista kommer inte att blockeras."
+   },
+   "options_whitelisted_domains": {
+      "message": "Vitlistade domäner"
+   },
+   "options_whitelistfilter_clear_confirm": {
+      "message": "Alla regler raderas om vitlistan rensas. Är du säker på att du vill rensa vitlistan?"
+   },
+   "popup_ads_has_been_removed": {
+      "message": "Annonser har tagits bort från denna sida"
+   },
+   "popup_ads_has_been_removed_by_abu": {
+      "message": "Skyddad av $1"
+   },
+   "popup_block_site_ads": {
+      "message": "Blockera annonser på denna webbsida"
+   },
+   "popup_block_site_ads_android": {
+      "message": "Blockera annonser på en webbsida"
+   },
+   "popup_blocked_total": {
+      "message": "Totalt:"
+   },
+   "popup_curent_tab_blocked": {
+      "message": "Blockerade:"
+   },
+   "popup_disabled_on_site": {
+      "message": "Inaktiverad på denna webbplats"
+   },
+   "popup_enabled_on_site": {
+      "message": "Aktiverad på denna webbplats"
+   },
+   "popup_get_abu_windows": {
+      "message": "Skaffa AdBlocker Ultimate för Windows"
+   },
+   "popup_on_this_site": {
+      "message": "på denna webbplats:"
+   },
+   "popup_open_log_android": {
+      "message": "Filtreringslogg"
+   },
+   "popup_open_settings": {
+      "message": "Inställningar för AdBlocker Ultimate"
+   },
+   "popup_protection_disabled": {
+      "message": "Skydd: Inaktiverat"
+   },
+   "popup_protection_enabled": {
+      "message": "Skydd: Aktiverat"
+   },
+   "popup_secure_page": {
+      "message": "Säkra sida"
+   },
+   "popup_security_report": {
+      "message": "Webbsidans säkerhetsrapport"
+   },
+   "popup_security_report_android": {
+      "message": "Säkerhetsrapport"
+   },
+   "popup_settings": {
+      "message": "Inställningar"
+   },
+   "popup_share_on_fb": {
+      "message": "Dela på Facebook"
+   },
+   "popup_share_on_twitter": {
+      "message": "Dela på Twitter"
+   },
+   "popup_site_filtering_state": {
+      "message": "Skydd på denna webbsida"
+   },
+   "popup_site_protection_disabled": {
+      "message": "AdBlocker Ultimate-skydd är pausat"
+   },
+   "popup_site_protection_disabled_android": {
+      "message": "Pausa skyddet"
+   },
+   "popup_status_inactive": {
+      "message": "Filtrering är ställd på ''inaktiv'' för att undvika eventuella webbstörningar."
+   },
+   "popup_tab_blocked": {
+      "message": "Blockerade: $1"
+   },
+   "popup_tab_blocked_all": {
+      "message": "Totalt: $1"
+   },
+   "popup_total": {
+      "message": "Totalt:"
+   },
+   "privacy_policy": {
+      "message": "Sekretesspolicy"
+   },
+   "report_bug": {
+      "message": "Rapportera en bugg"
+   },
+   "security": {
+      "message": "Säkerhet"
+   },
+   "shield_blocked_ads": {
+      "message": "blockerade annonser"
+   },
+   "shield_bronze_shield": {
+      "message": "bronssköld"
+   },
+   "shield_congrats": {
+      "message": "Grattis!"
+   },
+   "shield_congratulations": {
+      "message": "Gratulerar!"
+   },
+   "shield_contribute_to_our_project": {
+      "message": "Bidra till vårt projekt"
+   },
+   "shield_decreased_peak_cpu_usage": {
+      "message": "reducerade maximala processoranvändningen med $1"
+   },
+   "shield_decreased_peak_memory_usage": {
+      "message": "reducerade maximala minnesanvändningen med $1"
+   },
+   "shield_decreased_your_page_load_time": {
+      "message": "reducerade din inläsningstid med $1"
+   },
+   "shield_do_you_like_abu": {
+      "message": "Gillar du\u003C/br> AdBlocker Ultimate?"
+   },
+   "shield_dont_show_again": {
+      "message": "Visa inte detta meddelande igen"
+   },
+   "shield_email": {
+      "message": "E-post"
+   },
+   "shield_gold_shield": {
+      "message": "guldsköld"
+   },
+   "shield_got_no_ads": {
+      "message": "fick inga annonser tack vare"
+   },
+   "shield_message": {
+      "message": "Meddelande"
+   },
+   "shield_no_thanks": {
+      "message": "Nej tack"
+   },
+   "shield_rate_txt": {
+      "message": "Njuter du av att kunna blockera annonser? Hjälp då andra att även de kan hitta hit."
+   },
+   "shield_rate_us": {
+      "message": "Betygsätt oss"
+   },
+   "shield_send_feedback": {
+      "message": "Skicka feedback"
+   },
+   "shield_sending": {
+      "message": "Skickar…"
+   },
+   "shield_share_abu": {
+      "message": "Dela AdBlocker Ultimate:"
+   },
+   "shield_silver_shield": {
+      "message": "silversköld"
+   },
+   "shield_tell_how_to_improve": {
+      "message": "Berätta hur vi kan bli bättre"
+   },
+   "shield_thank_you": {
+      "message": "Tack!"
+   },
+   "shield_to_unlock": {
+      "message": "för att låsa upp"
+   },
+   "shield_we_blocked_more_than": {
+      "message": "vi blockerade fler än $1 annonser för dig och:"
+   },
+   "shield_you_won": {
+      "message": "du vann"
+   },
+   "short_name": {
+      "message": "AdBlocker Ultimate"
+   },
+   "store_ss_ads": {
+      "message": "annonser"
+   },
+   "store_ss_no_more_ads": {
+      "message": "Inga fler annonser med vår fria annonsblockerare"
+   },
+   "store_ss_no_more_banner_ads": {
+      "message": "Inga fler bannerannonser"
+   },
+   "store_ss_no_more_facebook_ads": {
+      "message": "Inga fler Facebookannonser"
+   },
+   "store_ss_no_more_video_ads": {
+      "message": "Inga fler videoannonser"
+   },
+   "store_ss_surf_and_all_annoying_ads": {
+      "message": "och alla irriterande annonser är borta!"
+   },
+   "store_ss_surf_faster": {
+      "message": "Surfa snabbare, säkrare, renare, utan irriterande annonser!"
+   },
+   "store_ss_surf_faster_with_no_ads": {
+      "message": "Surfa snabbare, säkrare med INGA ANNONSER"
+   },
+   "version": {
+      "message": "Version"
+   },
+   "yes": {
+      "message": "Ja"
+   }
+}
