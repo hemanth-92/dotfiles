@@ -70,6 +70,8 @@ sudo dnf install \
   fcitx5-configtool \
   unrar \
   bibata-cursor-themes \
+  eza \
+  lazygit \
   helium-browser-bin
 ```
 
