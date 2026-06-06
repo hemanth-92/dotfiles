@@ -133,28 +133,10 @@ window-rule {
     clip-to-geometry true
 }
 
-
-// // Enable blur behind the Alacritty terminal.
-// window-rule {
-//     match app-id="^otter-term$"
-
-//     background-effect {
-//         blur true
-//     }
-// }
-
-// // Enable blur behind the fuzzel launcher.
-// layer-rule {
-//     match namespace="^launcher$"
-
-//     background-effect {
-//         blur true
-//     }
-// }
-
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Alt+Return { spawn "otter-term"; }
+     Alt+Return { spawn "otter-term"; }
+    // Alt+Return { spawn "ghostty"; }
     // Mod+Space { spawn "pikabar-launcher"; }
     Mod+Space { spawn "sh" "-c" "pkill otter-launcher || otter-launcher"; }
     ALT+V { spawn-sh "cliphist list | rofi -dmenu -theme-str 'window {width: 50%;} listview {columns: 1;}' | cliphist decode | wl-copy"; }
@@ -163,6 +145,8 @@ binds {
     Mod+B {spawn "helium";}
     Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
 
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "otter-osd" "brightness-up" "5"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "otter-osd" "brightness-down" "5"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "otter-osd" "volume-up" "5"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "otter-osd" "volume-down" "5"; }
@@ -171,9 +155,6 @@ binds {
 
     Caps_Lock allow-when-locked=true { spawn "sh" "-c" "otter-osd caps-lock && wtype -k Caps_Lock"; } 
     Num_Lock allow-when-locked=true { spawn "sh" "-c" "otter-osd num-lock && wtype -k Num_Lock"; }
-
-    XF86MonBrightnessUp   allow-when-locked=true { spawn "otter-osd" "brightness-up" "5"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "otter-osd" "brightness-down" "5"; }
 
     Mod+Shift+Q { spawn "otter-logout"; }
     Mod+Q { close-window; }

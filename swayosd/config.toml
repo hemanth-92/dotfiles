@@ -1,0 +1,6 @@
+[server]
+top_margin = 0.05          # position from top (0.0 = very top, 1.0 = bottom)
+max_volume = 200         # already set in your niri binds via --max-volume 200
+min_brightness = 5         # already there by default
+# show_percentage = true   # optionally show % number next to the bar
+# style = "/etc/xdg/swayosd/style.css"  # your style.css overrides this anyway
