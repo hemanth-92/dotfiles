@@ -3,10 +3,7 @@ prefer-no-csd
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
     xcursor-size 24
-    // hide-when-typing
-    // hide-after-inactive-ms 1000
 }
-
 
 input {
     keyboard {
@@ -24,6 +21,11 @@ input {
     }
     focus-follows-mouse max-scroll-amount="85%"
 }
+
+output "eDP-1" {
+    mode "1280x720"
+}
+
 
 layout {
     gaps 1
@@ -59,26 +61,15 @@ layout {
     }
 }
 
-layer-rule {
-    match namespace="^swww-daemon$"
-    place-within-backdrop true
-}
-
-// spawn-at-startup "/usr/bin/mate-polkit"
-// spawn-at-startup "pikabar"
-// spawn-at-startup "systemctl" "--user" "enable" "--now" "hypridle"
-// spawn-at-startup "swww-daemon"
-
 spawn-at-startup "otter-bar"
 spawn-at-startup "otter-wallpaper"
-spawn-at-startup "otter-osd"
 spawn-at-startup "otter-notifications"
-spawn-at-startup "otter-polkit"
+spawn-at-startup "otter-osd"
 spawn-at-startup "otter-idle"
+spawn-at-startup "otter-polkit"
+spawn-at-startup "otter-clip" "daemon"
+spawn-at-startup "otter-weather" "--watch" "900" "--write-cache"
 
-spawn-at-startup "wl-clip-persist --clipboard both" 
-spawn-at-startup "wl-paste --type text --watch cliphist store" 
-spawn-at-startup "wl-paste --type image --watch cliphist store"
 spawn-at-startup "env" "QT_QPA_PLATFORM=wayland" "keepassxc"
 
 environment {
@@ -93,8 +84,6 @@ environment {
     QT_WAYLAND_FORCE_DPI "physical"
     EGL_PLATFORM "wayland"
     CLUTTER_BACKEND "wayland"
-    TERM "ghostty"
-    TERMINAL "ghostty"
      _JAVA_AWT_WM_NONREPARENTING "1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORMTHEME "qt6ct"
@@ -117,6 +106,11 @@ animations {
     // slowdown 3.0
 }
 
+layer-rule {
+    match namespace="^otter-wallpaper*"
+    place-within-backdrop true
+}
+
 window-rule {
     match app-id="^(steam_app_.*)$"
     variable-refresh-rate true
@@ -135,11 +129,9 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-     Alt+Return { spawn "otter-term"; }
-    // Alt+Return { spawn "ghostty"; }
-    // Mod+Space { spawn "pikabar-launcher"; }
+    Alt+Return { spawn "otter-term"; }
     Mod+Space { spawn "sh" "-c" "pkill otter-launcher || otter-launcher"; }
-    ALT+V { spawn-sh "cliphist list | rofi -dmenu -theme-str 'window {width: 50%;} listview {columns: 1;}' | cliphist decode | wl-copy"; }
+    Mod+V { spawn-sh "otter-clip popup";}
     Mod+E { spawn "nemo"; }
     ALT+L {spawn "sh" "-c" "playerctl pause; otter-lock";}
     Mod+B {spawn "helium";}
@@ -265,8 +257,8 @@ binds {
     Mod+Equal { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+V       { toggle-window-floating; }
+    Shift+V { switch-focus-between-floating-and-tiling; }
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
