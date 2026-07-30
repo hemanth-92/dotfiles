@@ -26,6 +26,7 @@ output "eDP-1" {
     mode "1280x720"
 }
 
+
 layout {
     gaps 1
     center-focused-column "never"
@@ -60,7 +61,15 @@ layout {
     }
 }
 
-spawn-at-startup "noctalia"
+spawn-at-startup "otter-bar"
+spawn-at-startup "otter-wallpaper"
+spawn-at-startup "otter-notifications"
+spawn-at-startup "otter-osd"
+spawn-at-startup "otter-idle"
+spawn-at-startup "otter-polkit"
+spawn-at-startup "otter-clip" "daemon"
+spawn-at-startup "otter-weather" "--watch" "900" "--write-cache"
+
 spawn-at-startup "env" "QT_QPA_PLATFORM=wayland" "keepassxc"
 
 environment {
@@ -98,44 +107,8 @@ animations {
 }
 
 layer-rule {
-    match namespace="^noctalia-wallpaper"
+    match namespace="^otter-wallpaper*"
     place-within-backdrop true
-}
-
-// Optionally, disable the workspace shadows in the overview.
-overview {
-  workspace-shadow {
-    off
-  }
-}
-
-/* Apps: blur them all without xray for a better look */
-window-rule {
-  background-effect {
-    blur true
-    xray false
-  }
-}
-
-/* Noctalia: blur everywhere without xray for a better look */
-layer-rule {
-  match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
-  background-effect {
-    xray false
-  }
-}
-
-window-rule {
-  // Rounded corners for a modern look.
-  geometry-corner-radius 20
-
-  // Clips window contents to the rounded corner boundaries.
-  clip-to-geometry true
-}
-
-debug {
-  // Allows notification actions and window activation from Noctalia.
-  honor-xdg-activation-with-invalid-serial
 }
 
 window-rule {
@@ -145,28 +118,37 @@ window-rule {
 }
 
 window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
     geometry-corner-radius 20
     clip-to-geometry true
 }
 
 binds {
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
-    Alt+Return { spawn "ghostty"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Alt+Return { spawn "otter-term"; }
+    Mod+Space { spawn "sh" "-c" "pkill otter-launcher || otter-launcher"; }
+    Mod+V { spawn-sh "otter-clip popup";}
     Mod+E { spawn "nemo"; }
+    ALT+L {spawn "sh" "-c" "playerctl pause; otter-lock";}
     Mod+B {spawn "helium";}
     Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
 
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "otter-osd" "brightness-up" "5"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "otter-osd" "brightness-down" "5"; }
 
-    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "otter-osd" "volume-up" "5"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "otter-osd" "volume-down" "5"; }
+    
+    XF86AudioMute allow-when-locked=true { spawn "otter-osd" "volume-mute-toggle"; }
 
-    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
-    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    Caps_Lock allow-when-locked=true { spawn "sh" "-c" "otter-osd caps-lock && wtype -k Caps_Lock"; } 
+    Num_Lock allow-when-locked=true { spawn "sh" "-c" "otter-osd num-lock && wtype -k Num_Lock"; }
 
+    Mod+Shift+Q { spawn "otter-logout"; }
     Mod+Q { close-window; }
     Mod+O repeat=false { toggle-overview; }
 
@@ -262,7 +244,7 @@ binds {
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Shift+Comma { consume-window-into-column; }
+    Mod+Comma  { consume-window-into-column; }
     Mod+Period { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
@@ -285,5 +267,3 @@ binds {
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 }
-
-include "noctalia.kdl"
