@@ -119,9 +119,10 @@ window-rule {
 
 /* Noctalia: blur everywhere without xray for a better look */
 layer-rule {
-  match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
   background-effect {
     xray false
+    // blur false
   }
 }
 
@@ -149,21 +150,33 @@ window-rule {
     clip-to-geometry true
 }
 
+
+
 binds {
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
-    Alt+Return { spawn "ghostty"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+E { spawn "nemo"; }
+
+    // Applications
+
+    Alt+Return { spawn "kitty"; }
+    Mod+E { spawn "nautilus"; }
     Mod+B {spawn "helium";}
     Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
 
+    // Core Noctalia binds
+
+    ALT+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+    Alt+L {spawn-sh "noctalia msg panel-toggle session";}
+    Mod+V {spawn-sh "noctalia msg panel-toggle clipboard";}
+
+    // Audio & Brightness
 
     XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+   
     XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
-
+    
     XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
     XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
 
