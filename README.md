@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-### Arch
+### Arch - Mangowc
 
 ```bash
 yay -S mangowc
@@ -14,65 +14,32 @@ yay -S rofi xdg-desktop-portal-wlr swaybg waybar wl-clip-persist cliphist wl-cli
 
 ---
 
-### Fedora
+### Fedora - Niri (Noctalia)
 
 #### 1. Enable COPR repos
 
 ```bash
-sudo dnf copr enable erikreider/SwayNotificationCenter
-sudo dnf copr enable erikreider/swayosd
-sudo dnf copr enable eddsalkield/swaylock-effects
-sudo dnf copr enable scottames/ghostty
+sudo dnf copr enable g3tchoo/prismlauncher
+sudo dnf copr enable imput/helium
+sudo dnf copr enable lionheartp/Hyprland
 sudo dnf copr enable peterwu/rendezvous
+sudo dnf copr enable scottames/ghostty
+sudo dnf copr enable yalter/niri
 ```
 
-#### 2. Enable Terra repo
 
-```bash
-sudo dnf install --nogpgcheck \
-  --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
-  terra-release
-```
-
-#### 3. Install packages
+#### 2. Install packages
 
 ```bash
 sudo dnf install \
   niri \
-  rofi \
-  xdg-desktop-portal-wlr \
-  swaybg \
-  waybar \
-  cliphist \
-  wl-clipboard \
-  wlsunset \
-  polkit-gnome \
-  SwayNotificationCenter \
-  pamixer \
-  swayidle \
-  brightnessctl \
-  swayosd \
-  wlr-randr \
-  grim \
-  slurp \
-  satty \
-  swaylock-effects \
-  sox \
-  zoxide \
-  blueman \
-  network-manager-applet \
+  noctalia \
+  noctalia-greeter \
   ghostty \
-  helix \
   neovim \
-  zed \
-  jetbrains-mono-fonts \
-  fcitx5 \
-  fcitx5-configtool \
-  unrar \
-  bibata-cursor-themes \
-  eza \
-  lazygit \
-  helium-browser-bin
+  helium-bin \
+  prismlauncher \
+  firefox \
 ```
 
 For native Wayland rendering on niri, add to your shell profile or niri environment:

@@ -78,6 +78,7 @@ environment {
      _JAVA_AWT_WM_NONREPARENTING "1"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
     //nv __GL_VRR_ALLOWED "1"
     //nv __GL_GSYNC_ALLOWED "1"
 }
@@ -88,14 +89,7 @@ hotkey-overlay {
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
-screenshot-notification-disable
-animations {
-    // Uncomment to turn off all animations.
-    // off
-
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
-}
+//screenshot-notification-disable
 
 layer-rule {
     match namespace="^noctalia-wallpaper"
@@ -110,11 +104,25 @@ overview {
 }
 
 /* Apps: blur them all without xray for a better look */
+// Blur all application windows
 window-rule {
-  background-effect {
-    blur true
-    xray false
-  }
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// Ghostty
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+
+    background-effect {
+        blur true
+        xray true
+    }
+
+    geometry-corner-radius 20
+    clip-to-geometry true
 }
 
 /* Noctalia: blur everywhere without xray for a better look */
@@ -124,14 +132,6 @@ layer-rule {
     xray false
     // blur false
   }
-}
-
-window-rule {
-  // Rounded corners for a modern look.
-  geometry-corner-radius 20
-
-  // Clips window contents to the rounded corner boundaries.
-  clip-to-geometry true
 }
 
 debug {
@@ -145,21 +145,15 @@ window-rule {
     open-fullscreen true
 }
 
-window-rule {
-    geometry-corner-radius 20
-    clip-to-geometry true
-}
-
-
-
 binds {
 
     // Applications
 
-    Alt+Return { spawn "kitty"; }
+    Alt+Return { spawn "ghostty"; }
     Mod+E { spawn "nautilus"; }
     Mod+B {spawn "helium";}
-    Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
+    //Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
+    Mod+D {spawn "discord";}
 
     // Core Noctalia binds
 
