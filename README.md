@@ -40,12 +40,13 @@ sudo dnf install \
   helium-bin \
   prismlauncher \
   firefox \
-```
-
-For native Wayland rendering on niri, add to your shell profile or niri environment:
-
-```bash
-export ELECTRON_OZONE_PLATFORM_HINT=auto
+  adw-gtk3 \
+  nwg-look \
+  nautilus \
+  btop \ 
+  eza \
+  zoxide \
+  discord
 ```
 
 ---
