@@ -31,22 +31,7 @@ sudo dnf copr enable yalter/niri
 #### 2. Install packages
 
 ```bash
-sudo dnf install \
-  niri \
-  noctalia \
-  noctalia-greeter \
-  ghostty \
-  neovim \
-  helium-bin \
-  prismlauncher \
-  firefox \
-  adw-gtk3 \
-  nwg-look \
-  nautilus \
-  btop \ 
-  eza \
-  zoxide \
-  discord
+sudo dnf install  niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop  eza zoxide discord
 ```
 
 ---
@@ -62,7 +47,7 @@ git clone https://github.com/hemanth-92/dotfiles.git
 Clone into a separate folder and symlink:
 
 ```bash
-ln -s ~/dotfiles/mango ~/.config
+ln -sfn ~/dotfiles/mango ~/.config/mango
 ```
 
 ### Method 2

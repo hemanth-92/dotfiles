@@ -15,3 +15,5 @@
 4. obsidian - flatpak
 5. https://techhut.tv/fedora-44-post-install-guide
 6. curl -fsSL https://christitus.com/linux | sh
+7. wallpaper repo - https://github.com/orangci/walls-catppuccin-mocha
+8. Symlink - Niri,ghostty,helix
