@@ -31,7 +31,7 @@ sudo dnf copr enable yalter/niri
 #### 2. Install packages
 
 ```bash
-sudo dnf install  niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop  eza zoxide discord
+sudo dnf install  niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop  eza zoxide discord foliate
 ```
 
 ---
