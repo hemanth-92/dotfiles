@@ -154,7 +154,7 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+B {spawn "helium";}
     //Mod+D { spawn-sh "flatpak run dev.vencord.Vesktop"; }
-    Mod+D {spawn "discord";}
+    Mod+D {spawn "vesktop";}
 
     // Core Noctalia binds
 
