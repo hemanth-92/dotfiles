@@ -1,0 +1,373 @@
+# Umbriel configuration — ported from niri/config.kdl
+#
+# Install:  ln -s ~/dotfiles/umbriel ~/.config/umbriel
+# Validate: umbriel validate -c ~/dotfiles/umbriel/config.toml
+# Reload:   saving the file applies live (or `umbriel msg config-reload`)
+#
+# Docs: https://docs.noctalia.dev/umbriel/
+
+# ─────────────────────────────── Includes ───────────────────────────────────
+
+[include]
+files = []                                      # e.g. ["noctalia.toml"] for a generated palette
+
+# ─────────────────────────────── General ────────────────────────────────────
+
+[general]
+mod_key = "Super"                               # niri's Mod
+xwayland = true
+show_cheatsheet = false                         # niri: hotkey-overlay { skip-at-startup }
+focus_on_activate = false
+honor_restored_maximize = false
+autostart = [
+    "noctalia",
+    "env QT_QPA_PLATFORM=wayland keepassxc",
+]
+
+[environment]
+LD_PRELOAD = ""
+MOZ_ENABLE_WAYLAND = "1"
+MOZ_DBUS_REMOTE = "1"
+# XDG_SESSION_TYPE / XDG_CURRENT_DESKTOP / XDG_SESSION_DESKTOP are set by Umbriel
+GDK_BACKEND = "wayland"
+CLUTTER_BACKEND = "wayland"
+EGL_PLATFORM = "wayland"
+QT_AUTO_SCREEN_SCALE_FACTOR = "1"
+QT_WAYLAND_FORCE_DPI = "physical"
+QT_QPA_PLATFORMTHEME = "qt6ct"
+QT_QPA_PLATFORMTHEME_QT6 = "qt6ct"
+_JAVA_AWT_WM_NONREPARENTING = "1"
+ELECTRON_OZONE_PLATFORM_HINT = "auto"
+# __GL_VRR_ALLOWED = "1"
+# __GL_GSYNC_ALLOWED = "1"
+
+# ─────────────────────────────── Outputs ────────────────────────────────────
+
+[output.eDP-1]
+mode = "1280x720"
+
+# ────────────────────────────── Workspaces ──────────────────────────────────
+
+[workspaces]
+back_and_forth = false
+empty_above = false
+
+# ───────────────────────────── Appearance ───────────────────────────────────
+
+[appearance]
+prefer_no_csd = true                            # niri: prefer-no-csd
+border_width = 0                                # niri had focus-ring and border off
+outer_border_width = 0
+corner_radius = 20                              # niri: geometry-corner-radius 20
+drag_opacity = 0.75
+
+# niri: blur { passes 3; offset 3.0; noise 0.03; saturation 1.0 }
+[appearance.blur]
+enabled = true
+optimized = false                               # niri: xray false everywhere
+passes = 3
+radius = 3
+noise = 0.03
+brightness = 0.9
+contrast = 0.9
+saturation = 1.0
+
+[appearance.shadow]
+enabled = true
+softness = 10
+offset_x = 2
+offset_y = 2
+
+# Borders are off above; these only matter if border_width is raised again.
+[colors.border]
+# focused = "#0DB7D4FF"
+# unfocused = "#04404AFF"
+
+# ──────────────────────────────── Input ─────────────────────────────────────
+
+[input]
+middle_click_paste = true
+
+[input.keyboard]
+layout = "us"
+variant = ""
+options = ""
+repeat_rate = 25                                # niri repeat-rate was commented out
+repeat_delay = 600                              # niri repeat-delay was commented out
+numlock_toggle = true
+track_layout = "global"
+
+[input.touchpad]
+tap = true
+natural_scroll = true
+
+[input.mouse]
+accel_profile = "flat"
+sensitivity = 0.0
+scroll_wheel_step = 60
+
+[input.cursor]
+theme = "Bibata-Modern-Ice"
+size = 24
+hardware_cursor = true
+follows_focus = false
+hide_when_typing = false
+hide_timeout_ms = 0
+
+[input.focus]
+follows_mouse = true
+follows_mouse_max_scroll = 0.7                  # niri: max-scroll-amount="70%"
+
+# ─────────────────────────────── Layout ─────────────────────────────────────
+
+[layout]
+mode = "dwindle"                                # default; toggle to scrolling with Mod+Ctrl+T
+gap = 1                                         # niri: gaps 1
+width_presets = [0.33333, 0.5, 0.66667, 1.0]
+
+[layout.struts]
+left = 0
+right = 0
+top = 0
+bottom = 0
+
+[layout.scrolling]
+default_width_fraction = 0.66667                # niri: default-column-width 0.66667
+center_underfull_strip = true
+center_focused = false                          # niri: center-focused-column "never"
+expand_single_column = true
+
+[layout.dwindle]
+preserve_split = false                          # true keeps split directions fixed after creation
+
+# ─────────────────────────────── Keybinds ───────────────────────────────────
+# Ported from niri/config.kdl. Chords listed here replace the built-ins;
+# built-ins not mentioned stay active (notably bare "Mod" opens the launcher).
+
+[keybinds]
+
+# Applications
+"Alt+Return" = "spawn:ghostty"
+"Mod+E" = "spawn:nautilus"
+"Mod+B" = "spawn:helium"
+"Mod+D" = "spawn:vesktop"
+
+# Core Noctalia binds
+"Alt+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+S" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+Comma" = "spawn:noctalia msg settings-toggle"
+"Alt+Tab" = "spawn:noctalia msg window-switcher"
+"Alt+L" = "spawn:noctalia msg panel-toggle session"
+"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+
+# Audio & brightness
+"XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down", allow_when_locked = true }
+
+# Window & session
+"Mod+Q" = "window-close"
+"Mod+O" = { action = "overview-toggle", repeat = false }
+"Mod+Shift+E" = "session-quit"
+"Ctrl+Alt+Delete" = "session-quit"
+
+# Focus windows / columns
+"Mod+Left" = "window-focus-left"
+"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-up"
+"Mod+Right" = "window-focus-right"
+"Mod+H" = "window-focus-left"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+L" = "window-focus-right"
+
+# Move windows / columns
+"Mod+Ctrl+Left" = "column-move-left"
+"Mod+Ctrl+Down" = "window-move-down"
+"Mod+Ctrl+Up" = "window-move-up"
+"Mod+Ctrl+Right" = "column-move-right"
+"Mod+Ctrl+H" = "column-move-left"
+"Mod+Ctrl+J" = "window-move-down"
+"Mod+Ctrl+K" = "window-move-up"
+"Mod+Ctrl+L" = "column-move-right"
+
+# Strip ends
+"Mod+Home" = "column-focus-first"
+"Mod+End" = "column-focus-last"
+"Mod+Ctrl+Home" = "column-move-to-first"
+"Mod+Ctrl+End" = "column-move-to-last"
+
+# Focus monitors
+"Mod+Shift+Left" = "output-focus-left"
+"Mod+Shift+Down" = "output-focus-down"
+"Mod+Shift+Up" = "output-focus-up"
+"Mod+Shift+Right" = "output-focus-right"
+"Mod+Shift+H" = "output-focus-left"
+"Mod+Shift+J" = "output-focus-down"
+"Mod+Shift+K" = "output-focus-up"
+"Mod+Shift+L" = "output-focus-right"
+
+# Move columns between monitors
+"Mod+Shift+Ctrl+Left" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+Down" = "column-move-to-output-down"
+"Mod+Shift+Ctrl+Up" = "column-move-to-output-up"
+"Mod+Shift+Ctrl+Right" = "column-move-to-output-right"
+"Mod+Shift+Ctrl+H" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+J" = "column-move-to-output-down"
+"Mod+Shift+Ctrl+K" = "column-move-to-output-up"
+"Mod+Shift+Ctrl+L" = "column-move-to-output-right"
+
+# Workspaces
+"Mod+Page_Down" = "workspace-next"
+"Mod+Page_Up" = "workspace-previous"
+"Mod+U" = "workspace-next"
+"Mod+I" = "workspace-previous"
+"Mod+Ctrl+Page_Down" = "column-move-to-workspace-next"
+"Mod+Ctrl+Page_Up" = "column-move-to-workspace-previous"
+"Mod+Ctrl+U" = "column-move-to-workspace-next"
+"Mod+Ctrl+I" = "column-move-to-workspace-previous"
+"Mod+Shift+Page_Down" = "workspace-move-down"
+"Mod+Shift+Page_Up" = "workspace-move-up"
+"Mod+Shift+U" = "workspace-move-down"
+"Mod+Shift+I" = "workspace-move-up"
+
+# Scroll wheel (niri's cooldown-ms has no Umbriel equivalent)
+"Mod+WheelDown" = "workspace-next"
+"Mod+WheelUp" = "workspace-previous"
+"Mod+Ctrl+WheelDown" = "column-move-to-workspace-next"
+"Mod+Ctrl+WheelUp" = "column-move-to-workspace-previous"
+"Mod+WheelRight" = "window-focus-right"
+"Mod+WheelLeft" = "window-focus-left"
+"Mod+Ctrl+WheelRight" = "column-move-right"
+"Mod+Ctrl+WheelLeft" = "column-move-left"
+"Mod+Shift+WheelDown" = "window-focus-right"
+"Mod+Shift+WheelUp" = "window-focus-left"
+"Mod+Ctrl+Shift+WheelDown" = "column-move-right"
+"Mod+Ctrl+Shift+WheelUp" = "column-move-left"
+
+# Numbered workspaces
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+"Mod+Shift+1" = "column-move-to-workspace:1"
+"Mod+Shift+2" = "column-move-to-workspace:2"
+"Mod+Shift+3" = "column-move-to-workspace:3"
+"Mod+Shift+4" = "column-move-to-workspace:4"
+"Mod+Shift+5" = "column-move-to-workspace:5"
+"Mod+Shift+6" = "column-move-to-workspace:6"
+"Mod+Shift+7" = "column-move-to-workspace:7"
+"Mod+Shift+8" = "column-move-to-workspace:8"
+"Mod+Shift+9" = "column-move-to-workspace:9"
+
+# Columns & stacking
+"Mod+Bracketleft" = "window-consume-or-expel-left"
+"Mod+Bracketright" = "window-consume-or-expel-right"
+"Mod+Shift+Comma" = "window-consume-right"      # niri: consume-window-into-column
+"Mod+Period" = "window-consume-or-expel-right"  # niri: expel-window-from-column
+
+# Sizing
+"Mod+R" = "window-cycle-width"
+"Mod+Shift+R" = "window-cycle-height"
+"Mod+Ctrl+R" = "window-cycle-height-back"       # niri had reset-window-height
+"Mod+F" = "window-toggle-maximize"
+"Mod+Shift+F" = "window-toggle-fullscreen"
+"Mod+C" = "column-center"
+"Mod+Minus" = "window-modify-width:-0.1"
+"Mod+Equal" = "window-modify-width:0.1"
+"Mod+Shift+Minus" = "window-modify-height:-0.1"
+"Mod+Shift+Equal" = "window-modify-height:0.1"
+
+# Layout mode (per workspace)
+"Mod+Ctrl+T" = "workspace-set-layout:toggle"
+"Mod+Ctrl+D" = "workspace-set-layout:dwindle"
+"Mod+Ctrl+S" = "workspace-set-layout:scrolling"
+
+# Floating
+"Mod+Shift+V" = "window-toggle-floating"
+"Shift+V" = "window-focus-switch-floating"
+
+# Screenshots (niri's built-ins; Noctalia provides them here)
+"Print" = "spawn:noctalia msg screenshot-region"
+"Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen"
+"Alt+Print" = "spawn:noctalia msg screenshot-fullscreen pick"
+
+# ───────────────────────────── Window Rules ─────────────────────────────────
+
+# niri: blur every window without xray
+[[window_rule]]
+blur = true
+blur_optimized = false
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+
+[[window_rule]]
+match.app_id = "^org.keepassxc.KeePassXC$"
+default_floating = true
+
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+# ────────────────────────────── Layer Rules ─────────────────────────────────
+
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+blur_optimized = false
+
+# ────────────────────────────── Animation ───────────────────────────────────
+
+[animation]
+enabled = true
+duration_ms = 250
+curve = "easeout"
+
+[animation.windows_in]
+enabled = true
+duration_ms = 150
+style = "popin"
+scale = 0.85
+
+[animation.windows_out]
+enabled = true
+duration_ms = 150
+style = "fade"
+
+[animation.windows_move]
+enabled = true
+curve = "snappy"
+
+[animation.workspaces]
+enabled = true
+
+[animation.overview]
+enabled = true
+
+# ─────────────────────── Overview and Hot Corners ───────────────────────────
+
+[overview]
+zoom = 0.5
+
+[hot_corners.top_left]
+enabled = false
+delay_ms = 500
+action = "overview-open"
