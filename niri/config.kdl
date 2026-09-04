@@ -9,9 +9,12 @@ input {
     keyboard {
       //  repeat-delay 300
       // repeat-rate 30
-    }
 
-    touchpad {
+        xkb {
+            layout "us"        
+        }
+    }
+ touchpad {
         tap
         natural-scroll
     }
