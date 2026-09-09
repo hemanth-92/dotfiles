@@ -9,7 +9,7 @@
 # ─────────────────────────────── Includes ───────────────────────────────────
 
 [include]
-files = []                                      # e.g. ["noctalia.toml"] for a generated palette
+files = []                                      # e.g. [] for a generated palette
 
 # ─────────────────────────────── General ────────────────────────────────────
 
@@ -33,7 +33,8 @@ GDK_BACKEND = "wayland"
 CLUTTER_BACKEND = "wayland"
 EGL_PLATFORM = "wayland"
 QT_AUTO_SCREEN_SCALE_FACTOR = "1"
-QT_WAYLAND_FORCE_DPI = "physical"
+# QT_WAYLAND_FORCE_DPI = "physical"             # 157 DPI on this panel -> oversized Qt UI;
+                                                # leave unset so Qt follows the output scale
 QT_QPA_PLATFORMTHEME = "qt6ct"
 QT_QPA_PLATFORMTHEME_QT6 = "qt6ct"
 _JAVA_AWT_WM_NONREPARENTING = "1"
@@ -44,7 +45,8 @@ ELECTRON_OZONE_PLATFORM_HINT = "auto"
 # ─────────────────────────────── Outputs ────────────────────────────────────
 
 [output.eDP-1]
-mode = "1280x720"
+mode = "1920x1080@60"                           # panel's native/preferred mode
+scale = 1.25                                    # ~157 DPI panel; 1.5 = old 1280x720 logical size
 
 # ────────────────────────────── Workspaces ──────────────────────────────────
 
@@ -121,7 +123,7 @@ follows_mouse_max_scroll = 0.7                  # niri: max-scroll-amount="70%"
 # ─────────────────────────────── Layout ─────────────────────────────────────
 
 [layout]
-mode = "dwindle"                                # default; toggle to scrolling with Mod+Ctrl+T
+mode = "scrolling"                              # default; toggle to dwindle with Mod+Ctrl+T
 gap = 1                                         # niri: gaps 1
 width_presets = [0.33333, 0.5, 0.66667, 1.0]
 
@@ -174,20 +176,12 @@ preserve_split = false                          # true keeps split directions fi
 "Ctrl+Alt+Delete" = "session-quit"
 
 # Focus windows / columns
-"Mod+Left" = "window-focus-left"
-"Mod+Down" = "window-focus-down"
-"Mod+Up" = "window-focus-up"
-"Mod+Right" = "window-focus-right"
 "Mod+H" = "window-focus-left"
 "Mod+J" = "window-focus-down"
 "Mod+K" = "window-focus-up"
 "Mod+L" = "window-focus-right"
 
 # Move windows / columns
-"Mod+Ctrl+Left" = "column-move-left"
-"Mod+Ctrl+Down" = "window-move-down"
-"Mod+Ctrl+Up" = "window-move-up"
-"Mod+Ctrl+Right" = "column-move-right"
 "Mod+Ctrl+H" = "column-move-left"
 "Mod+Ctrl+J" = "window-move-down"
 "Mod+Ctrl+K" = "window-move-up"
@@ -200,20 +194,12 @@ preserve_split = false                          # true keeps split directions fi
 "Mod+Ctrl+End" = "column-move-to-last"
 
 # Focus monitors
-"Mod+Shift+Left" = "output-focus-left"
-"Mod+Shift+Down" = "output-focus-down"
-"Mod+Shift+Up" = "output-focus-up"
-"Mod+Shift+Right" = "output-focus-right"
 "Mod+Shift+H" = "output-focus-left"
 "Mod+Shift+J" = "output-focus-down"
 "Mod+Shift+K" = "output-focus-up"
 "Mod+Shift+L" = "output-focus-right"
 
 # Move columns between monitors
-"Mod+Shift+Ctrl+Left" = "column-move-to-output-left"
-"Mod+Shift+Ctrl+Down" = "column-move-to-output-down"
-"Mod+Shift+Ctrl+Up" = "column-move-to-output-up"
-"Mod+Shift+Ctrl+Right" = "column-move-to-output-right"
 "Mod+Shift+Ctrl+H" = "column-move-to-output-left"
 "Mod+Shift+Ctrl+J" = "column-move-to-output-down"
 "Mod+Shift+Ctrl+K" = "column-move-to-output-up"
@@ -368,6 +354,6 @@ enabled = true
 zoom = 0.5
 
 [hot_corners.top_left]
-enabled = false
-delay_ms = 500
+enabled = true
+delay_ms = 0
 action = "overview-open"
