@@ -136,8 +136,8 @@ bottom = 0
 [layout.scrolling]
 default_width_fraction = 0.66667                # niri: default-column-width 0.66667
 center_underfull_strip = true
-center_focused = false                          # niri: center-focused-column "never"
-expand_single_column = true
+center_focused = "never"                         # niri: center-focused-column "never"
+
 
 [layout.dwindle]
 preserve_split = false                          # true keeps split directions fixed after creation
@@ -291,6 +291,8 @@ preserve_split = false                          # true keeps split directions fi
 [[window_rule]]
 blur = true
 blur_optimized = false
+match.is_alone = true
+default_maximize = true
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
