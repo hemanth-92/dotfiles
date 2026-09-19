@@ -125,7 +125,7 @@ follows_mouse_max_scroll = 0.7                  # niri: max-scroll-amount="70%"
 [layout]
 mode = "scrolling"                              # default; toggle to dwindle with Mod+Ctrl+T
 gap = 1                                         # niri: gaps 1
-width_presets = [0.33333, 0.5, 0.66667, 1.0]
+extent_presets = [0.33333, 0.5, 0.66667, 1.0]
 
 [layout.struts]
 left = 0
@@ -134,7 +134,7 @@ top = 0
 bottom = 0
 
 [layout.scrolling]
-default_width_fraction = 0.66667                # niri: default-column-width 0.66667
+default_extent_fraction = 0.66667                # niri: default-column-width 0.66667
 center_underfull_strip = true
 center_focused = "never"                         # niri: center-focused-column "never"
 
@@ -260,16 +260,16 @@ preserve_split = false                          # true keeps split directions fi
 "Mod+Period" = "window-consume-or-expel-right"  # niri: expel-window-from-column
 
 # Sizing
-"Mod+R" = "window-cycle-width"
-"Mod+Shift+R" = "window-cycle-height"
-"Mod+Ctrl+R" = "window-cycle-height-back"       # niri had reset-window-height
+"Mod+R" = "window-cycle-primary-extent"
+"Mod+Shift+R" = "window-cycle-secondary-extent"
+"Mod+Ctrl+R" = "window-cycle-secondary-extent-back"       # niri had reset-window-height
 "Mod+F" = "window-toggle-maximize"
 "Mod+Shift+F" = "window-toggle-fullscreen"
 "Mod+C" = "column-center"
-"Mod+Minus" = "window-modify-width:-0.1"
-"Mod+Equal" = "window-modify-width:0.1"
-"Mod+Shift+Minus" = "window-modify-height:-0.1"
-"Mod+Shift+Equal" = "window-modify-height:0.1"
+"Mod+Minus" = "window-modify-primary-extent:-0.1"
+"Mod+Equal" = "window-modify-primary-extent:0.1"
+"Mod+Shift+Minus" = "window-modify-secondary-extent:-0.1"
+"Mod+Shift+Equal" = "window-modify-secondary-extent:0.1"
 
 # Layout mode (per workspace)
 "Mod+Ctrl+T" = "workspace-set-layout:toggle"
@@ -297,12 +297,12 @@ default_maximize = true
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
-default_size = [1020, 900]
+default_floating_size_px = { width = 1020, height = 900 }
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size_px = { width = 800, height = 600 }
 
 [[window_rule]]
 match.app_id = "^org.keepassxc.KeePassXC$"
