@@ -21,7 +21,7 @@ focus_on_activate = false
 honor_restored_maximize = false
 autostart = [
     "noctalia",
-    "env QT_QPA_PLATFORM=wayland keepassxc",
+    # "env QT_QPA_PLATFORM=wayland keepassxc",
 ]
 
 [environment]
