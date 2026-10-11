@@ -6,9 +6,9 @@ end
 
 return {
     {
-        "folke/tokyonight.nvim",
+        "rebelot/kanagawa.nvim",
         config = function()
-            vim.cmd.colorscheme "tokyonight"
+            vim.cmd.colorscheme "kanagawa-dragon"
             vim.cmd('hi Directory guibg=NONE')
             vim.cmd('hi SignColumn guibg=NONE')
             enable_transparency()

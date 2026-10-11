@@ -4,18 +4,19 @@
 # Validate: noctalia config validate
 # Reload:   noctalia msg config-reload
 #
-# GUI changes land in ~/.local/state/noctalia/settings.toml and win over this
-# file; drop the matching keys there if something here seems ignored.
+# GUI changes land in settings.toml (next to this file, symlinked from
+# ~/.local/state/noctalia/settings.toml) and win over this file; drop the
+# matching keys there if something here seems ignored.
 #
 # Docs: https://docs.noctalia.dev/noctalia/
 
 # ─────────────────────────────── Theme ──────────────────────────────────────
-# Community Catppuccin Mocha palette (mauve accent) pushed to every app below.
+# Community Kanagawa Dragon palette pushed to every app below.
 # Catalog: https://github.com/noctalia-dev/community-palettes
 
 [theme]
 source = "community"
-community_palette = "Catppuccin Mocha Mauve-Lavender"
+community_palette = "Kanagawa Dragon"
 mode = "dark"
 
 [theme.templates]
@@ -25,7 +26,7 @@ community_ids = ["bat", "claude-code", "discord", "fzf", "obsidian", "vscode", "
 # ────────────────────────────── Wallpaper ───────────────────────────────────
 
 [wallpaper]
-directory = "/home/dusk/dotfiles/wallpapers/catppuccin"
+directory = "/home/dusk/dotfiles/wallpapers/kanagawa"
 
 # ──────────────────────────────── Bar ───────────────────────────────────────
 # Floating, inset bar: status cluster in the middle, date/time on the right.

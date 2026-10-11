@@ -14,7 +14,7 @@ yay -S rofi xdg-desktop-portal-wlr swaybg waybar wl-clip-persist cliphist wl-cli
 
 ---
 
-### Fedora - Niri (Noctalia)
+### Fedora - Umbriel/Niri (Noctalia)
 
 See [fedora-setup.md](fedora-setup.md).
 
@@ -32,6 +32,9 @@ for d in niri umbriel noctalia ghostty helix nvim; do
     ln -sfn ~/dotfiles/$d ~/.config/$d
 done
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc
+mkdir -p ~/.local/state/noctalia ~/.config/vesktop/themes
+ln -sfn ~/dotfiles/noctalia/settings.toml ~/.local/state/noctalia/settings.toml
+ln -sfn ~/dotfiles/vesktop/themes/*.theme.css ~/.config/vesktop/themes/
 
 # Arch - Mangowc
 for d in mango waybar rofi swaync swayosd swaylock; do
