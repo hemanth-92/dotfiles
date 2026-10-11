@@ -23,7 +23,7 @@ sudo dnf install niri noctalia noctalia-greeter ghostty neovim helium-bin prisml
 
 ```bash
 sudo dnf install dnf-plugins-core
-sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
+sudo dnf config-manager addrepo --from-repofile=https://terra.fyralabs.com/terra.repo
 sudo dnf install umbriel-nightly
 ```
 
