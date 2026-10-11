@@ -22,22 +22,22 @@ See [fedora-setup.md](fedora-setup.md).
 
 ## Usage
 
-```bash
-git clone https://github.com/hemanth-92/dotfiles.git
-```
-
-### Method 1
-
-Clone into a separate folder and symlink:
+Clone the repo and symlink the configs you want:
 
 ```bash
-ln -sfn ~/dotfiles/mango ~/.config/mango
+git clone https://github.com/hemanth-92/dotfiles.git ~/dotfiles
+
+# Fedora - Niri / Umbriel (Noctalia)
+for d in niri umbriel ghostty helix nvim; do
+    ln -sfn ~/dotfiles/$d ~/.config/$d
+done
+ln -sfn ~/dotfiles/.bashrc ~/.bashrc
+
+# Arch - Mangowc
+for d in mango waybar rofi swaync swayosd swaylock; do
+    ln -sfn ~/dotfiles/$d ~/.config/$d
+done
 ```
 
-### Method 2
-
-Clone directly into `.config`:
-
-```bash
-git clone https://github.com/hemanth-92/dotfiles.git ~/.config
-```
+Back up any existing configs first — `ln -sfn` does not replace a real
+directory, it creates the link inside it.
