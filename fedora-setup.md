@@ -45,5 +45,6 @@ sudo dnf install umbriel-nightly
 6. curl -fsSL https://christitus.com/linux | sh
 7. wallpaper repos
    - Catppuccin Mocha - https://github.com/orangci/walls-catppuccin-mocha
-   - Kanagawa - https://github.com/Gurjaka/Kanagawa-Wallpapers (archived; active on https://codeberg.org/Gurjaka/Kanagawa-Wallpapers)
+   - Kanagawa - https://github.com/Gurjaka/Kanagawa-Wallpapers (archived; active on https://codeberg.org/juna-lab/Kanagawa-Wallpapers)
+   - Nord - https://github.com/linuxdotexe/nordic-wallpapers
 8. Symlink - Niri,ghostty,helix

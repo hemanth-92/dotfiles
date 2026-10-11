@@ -28,7 +28,7 @@ Clone the repo and symlink the configs you want:
 git clone https://github.com/hemanth-92/dotfiles.git ~/dotfiles
 
 # Fedora - Niri / Umbriel (Noctalia)
-for d in niri umbriel ghostty helix nvim; do
+for d in niri umbriel noctalia ghostty helix nvim; do
     ln -sfn ~/dotfiles/$d ~/.config/$d
 done
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc

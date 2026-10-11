@@ -120,3 +120,6 @@ export PATH="$HOME/.grok/bin:$PATH"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# fzf colors from Noctalia
+[ -f "$HOME/.config/fzf/themes/noctalia.sh" ] && . "$HOME/.config/fzf/themes/noctalia.sh"

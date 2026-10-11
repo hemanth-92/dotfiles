@@ -1,0 +1,77 @@
+# Noctalia configuration
+#
+# Install:  ln -sfn ~/dotfiles/noctalia ~/.config/noctalia
+# Validate: noctalia config validate
+# Reload:   noctalia msg config-reload
+#
+# GUI changes land in ~/.local/state/noctalia/settings.toml and win over this
+# file; drop the matching keys there if something here seems ignored.
+#
+# Docs: https://docs.noctalia.dev/noctalia/
+
+# ─────────────────────────────── Theme ──────────────────────────────────────
+# Community Catppuccin Mocha palette (mauve accent) pushed to every app below.
+# Catalog: https://github.com/noctalia-dev/community-palettes
+
+[theme]
+source = "community"
+community_palette = "Catppuccin Mocha Mauve-Lavender"
+mode = "dark"
+
+[theme.templates]
+builtin_ids = ["btop", "cava", "gtk3", "gtk4", "ghostty", "helix", "qt", "umbriel"]
+community_ids = ["bat", "claude-code", "discord", "fzf", "obsidian", "vscode", "zed"]
+
+# ────────────────────────────── Wallpaper ───────────────────────────────────
+
+[wallpaper]
+directory = "/home/dusk/dotfiles/wallpapers/catppuccin"
+
+# ──────────────────────────────── Bar ───────────────────────────────────────
+# Floating, inset bar: status cluster in the middle, date/time on the right.
+# Control center and session stay reachable via Mod+S / Alt+L.
+
+[bar.default]
+position = "top"
+thickness = 30
+margin_edge = 8                                 # float off the screen edge
+margin_ends = 120
+concave_edge_corners = false                    # needs margin_edge = 0
+radius = 12
+background_opacity = 0.85
+shadow = true
+font_family = "MesloLGS Nerd Font Mono"         # monospace bar text, as in the reference
+start = ["launcher", "screenshot", "wallpaper", "tray"]
+center = ["workspaces"]
+end = ["battery", "clock", "notifications"]
+
+[widget.clock]
+format = "{:%a, %b %d  %-I:%M %p}"
+
+[widget.weather]
+show_condition = false
+
+# ─────────────────────────── Desktop widgets ────────────────────────────────
+# Positions are logical px on eDP-1 (1920x1080 @ 1.25 -> 1536x864).
+# Fine-tune with: noctalia msg desktop-widgets-edit
+
+[desktop_widgets]
+enabled = true
+
+# Spectrum hanging from the bar
+[desktop_widgets.widget.spectrum]
+type = "audio_visualizer"
+output = "eDP-1"
+cx = 768.0
+cy = 70.0
+box_width = 1000.0
+box_height = 60.0
+flip_y = true                                   # bars grow downward from the bar
+
+[desktop_widgets.widget.spectrum.settings]
+bands = 64
+mirrored = true
+centered = false
+background = false
+color_1 = "primary"
+color_2 = "secondary"
