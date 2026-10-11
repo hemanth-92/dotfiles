@@ -362,3 +362,6 @@ zoom = 0.5
 enabled = true
 delay_ms = 150
 action = "overview-toggle"
+
+[include.optional]
+files = ["noctalia.toml"]
