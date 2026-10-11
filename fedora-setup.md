@@ -1,3 +1,32 @@
+# Fedora - Niri (Noctalia)
+
+## Install
+
+### 1. Enable COPR repos
+
+```bash
+sudo dnf copr enable g3tchoo/prismlauncher
+sudo dnf copr enable imput/helium
+sudo dnf copr enable lionheartp/Hyprland
+sudo dnf copr enable peterwu/rendezvous
+sudo dnf copr enable scottames/ghostty
+sudo dnf copr enable yalter/niri
+```
+
+### 2. Install packages
+
+```bash
+sudo dnf install niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop eza zoxide discord foliate zed
+```
+
+### 3. Umbriel (Terra repo)
+
+```bash
+sudo dnf install dnf-plugins-core
+sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
+sudo dnf install umbriel-nightly
+```
+
 ## Troubleshoot
 
 1. Wi-Fi not detected → Intel Wi-Fi hardware was detected but the required firmware was missing → Installed `iwlwifi-dvm-firmware` and `iwlwifi-mvm-firmware` with `sudo dnf install iwlwifi-dvm-firmware iwlwifi-mvm-firmware` → Wi-Fi started working.
@@ -6,8 +35,7 @@
 
 3. Greeter not working → `greetd` and Noctalia Greeter were not correctly integrated into the graphical login flow → Checked `systemctl`, `journalctl`, `/etc/greetd/`, and the `graphical.target` dependency → fixed the greetd/Noctalia Greeter configuration.
 
-
-## Setups 
+## Setups
 
 1. setup gtk/qt - https://docs.noctalia.dev/v5/templates/official/gtk-qt/
 2. Install vscode/antigravity/cursor as per docs

@@ -16,23 +16,7 @@ yay -S rofi xdg-desktop-portal-wlr swaybg waybar wl-clip-persist cliphist wl-cli
 
 ### Fedora - Niri (Noctalia)
 
-#### 1. Enable COPR repos
-
-```bash
-sudo dnf copr enable g3tchoo/prismlauncher
-sudo dnf copr enable imput/helium
-sudo dnf copr enable lionheartp/Hyprland
-sudo dnf copr enable peterwu/rendezvous
-sudo dnf copr enable scottames/ghostty
-sudo dnf copr enable yalter/niri
-```
-
-
-#### 2. Install packages
-
-```bash
-sudo dnf install  niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop  eza zoxide discord foliate
-```
+See [fedora-setup.md](fedora-setup.md).
 
 ---
 
