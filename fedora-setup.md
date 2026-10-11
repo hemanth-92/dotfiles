@@ -43,5 +43,7 @@ sudo dnf install umbriel-nightly
 4. obsidian - flatpak
 5. https://techhut.tv/fedora-44-post-install-guide
 6. curl -fsSL https://christitus.com/linux | sh
-7. wallpaper repo - https://github.com/orangci/walls-catppuccin-mocha
+7. wallpaper repos
+   - Catppuccin Mocha - https://github.com/orangci/walls-catppuccin-mocha
+   - Kanagawa - https://github.com/Gurjaka/Kanagawa-Wallpapers (archived; active on https://codeberg.org/Gurjaka/Kanagawa-Wallpapers)
 8. Symlink - Niri,ghostty,helix
