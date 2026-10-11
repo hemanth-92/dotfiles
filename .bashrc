@@ -42,7 +42,9 @@ fi
 # Prompt
 # ==============================
 
-PS1='\[\e[1;32m\]\u\[\e[0m\]@\[\e[1;33m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ '
+# Plain ANSI colors (no bold) so the terminal's Noctalia palette applies;
+# 90 = bright black, used to mute the separators.
+PS1='\[\e[32m\]\u\[\e[90m\]@\[\e[33m\]\h\[\e[90m\]:\[\e[34m\]\w\[\e[90m\]\$\[\e[0m\] '
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
