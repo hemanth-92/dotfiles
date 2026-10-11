@@ -66,6 +66,10 @@ alias .....='cd ../../../..'
 alias ~='cd ~'
 
 # eza instead of ls
+# Kanagawa file colors via ANSI indexes, so the Noctalia palette applies:
+# dirs blue, exec bright green, links bright cyan, media magenta,
+# archives bright yellow.
+export EZA_COLORS='di=34:ex=92:ln=96:im=35:vi=35:mu=35:lo=35:cm=93'
 alias ls='eza --color=auto --group-directories-first'
 alias ll='eza -la --icons'
 alias tree='eza --tree'
