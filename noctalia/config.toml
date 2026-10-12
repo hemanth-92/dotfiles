@@ -11,22 +11,21 @@
 # Docs: https://docs.noctalia.dev/noctalia/
 
 # ─────────────────────────────── Theme ──────────────────────────────────────
-# Community Kanagawa Dragon palette pushed to every app below.
-# Catalog: https://github.com/noctalia-dev/community-palettes
+# Built-in Catppuccin (Mocha in dark mode) pushed to every app below.
+# Community catalog: https://github.com/noctalia-dev/community-palettes
 
 [theme]
-source = "community"
-community_palette = "Kanagawa Dragon"
+source = "builtin"
+builtin = "Catppuccin"
 mode = "dark"
 
 [theme.templates]
 builtin_ids = ["btop", "cava", "gtk3", "gtk4", "ghostty", "helix", "qt", "umbriel"]
-community_ids = ["bat", "claude-code", "discord", "fzf", "obsidian", "vscode", "zed"]
 
 # ────────────────────────────── Wallpaper ───────────────────────────────────
 
 [wallpaper]
-directory = "/home/dusk/dotfiles/wallpapers/kanagawa"
+directory = "/home/dusk/Pictures/walls-catppuccin-mocha"
 
 # ──────────────────────────────── Bar ───────────────────────────────────────
 # Floating, inset bar: status cluster in the middle, date/time on the right.

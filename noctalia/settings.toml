@@ -81,20 +81,19 @@ screen_time_enabled = true
     directory = "/home/dusk/Pictures"
 
 [theme]
-builtin = "Kanagawa"
-community_palette = "Kanagawa Dragon"
+builtin = "Catppuccin"
 mode = "dark"
-source = "community"
+source = "builtin"
 wallpaper_scheme = "m3-content"
 
 [wallpaper.automation]
 enabled = false
 
 [wallpaper.default]
-path = "/home/dusk/dotfiles/wallpapers/kanagawa/mountains-retreat.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"
 
 [wallpaper.last]
-path = "/home/dusk/dotfiles/wallpapers/kanagawa/mountains-retreat.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/dusk/dotfiles/wallpapers/kanagawa/mountains-retreat.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"

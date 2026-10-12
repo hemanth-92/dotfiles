@@ -6,22 +6,15 @@ end
 
 return {
     {
-        "rebelot/kanagawa.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
         config = function()
-            vim.cmd.colorscheme "kanagawa-dragon"
+            require("catppuccin").setup({ flavour = "mocha" })
+            vim.cmd.colorscheme "catppuccin"
             vim.cmd('hi Directory guibg=NONE')
             vim.cmd('hi SignColumn guibg=NONE')
             enable_transparency()
         end
     },
-    -- {
-    --     "Mofiqul/vscode.nvim",
-    --     name = 'vscode',
-    --     config = function()
-    --         vim.cmd.colorscheme "vscode"
-    --         vim.cmd('hi Directory guibg=NONE')
-    --         vim.cmd('hi SignColumn guibg=NONE')
-    --         enable_transparency()
-    --     end
-    -- }
 }
