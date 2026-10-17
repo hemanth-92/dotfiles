@@ -16,7 +16,7 @@ HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 # Save history instantly
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -123,3 +123,5 @@ export PATH="$HOME/.opencode/bin:$PATH"
 
 # fzf colors from Noctalia
 [ -f "$HOME/.config/fzf/themes/noctalia.sh" ] && . "$HOME/.config/fzf/themes/noctalia.sh"
+
+fastfetch -c examples/27

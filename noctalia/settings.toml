@@ -1,4 +1,4 @@
-config_version = 14
+config_version = 15
 
 [audio]
 enable_overdrive = true
@@ -48,6 +48,9 @@ password_style = "random"
 polkit_agent = true
 screen_time_enabled = true
 
+    [shell.launcher]
+    app_grid = false
+
     [shell.screenshot]
     directory = "/home/dusk/Pictures"
 
@@ -58,13 +61,13 @@ source = "builtin"
 wallpaper_scheme = "m3-content"
 
 [wallpaper.automation]
-enabled = false
+enabled = true
 
 [wallpaper.default]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"
 
 [wallpaper.last]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/cabin-2.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"

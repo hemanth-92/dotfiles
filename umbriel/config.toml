@@ -152,7 +152,7 @@ preserve_split = false                          # true keeps split directions fi
 "Alt+Return" = "spawn:ghostty"
 "Mod+E" = "spawn:nautilus"
 "Mod+B" = "spawn:helium"
-"Mod+D" = "spawn:vesktop"
+"Mod+D" = "spawn:serein"
 
 # Core Noctalia binds
 "Mod+space" = "spawn:noctalia msg panel-toggle launcher"
@@ -173,7 +173,6 @@ preserve_split = false                          # true keeps split directions fi
 "Mod+Q" = "window-close"
 "Mod+O" = { action = "overview-toggle", repeat = false }
 "Mod+Shift+E" = "session-quit"
-"Ctrl+Alt+Delete" = "session-quit"
 
 # Focus windows / columns
 "Mod+H" = "window-focus-left"

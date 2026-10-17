@@ -16,7 +16,7 @@ sudo dnf copr enable yalter/niri
 ### 2. Install packages
 
 ```bash
-sudo dnf install niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop eza zoxide discord foliate zed
+sudo dnf install niri noctalia noctalia-greeter ghostty neovim helium-bin prismlauncher firefox adw-gtk3 nwg-look nautilus btop eza zoxide discord foliate zed tealdeer fastfetch
 ```
 
 ### 3. Umbriel (Terra repo)
