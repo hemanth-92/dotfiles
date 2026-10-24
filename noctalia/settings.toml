@@ -52,7 +52,7 @@ screen_time_enabled = true
     app_grid = false
 
     [shell.screenshot]
-    directory = "/home/dusk/Pictures"
+    directory = "/home/dusk/Pictures/Screenshots"
 
 [theme]
 builtin = "Catppuccin"
@@ -64,10 +64,10 @@ wallpaper_scheme = "m3-content"
 enabled = true
 
 [wallpaper.default]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"
 
 [wallpaper.last]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/temple.jpg"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"

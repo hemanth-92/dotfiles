@@ -35,6 +35,9 @@ ln -sfn ~/dotfiles/.bashrc ~/.bashrc
 mkdir -p ~/.local/state/noctalia ~/.config/vesktop/themes
 ln -sfn ~/dotfiles/noctalia/settings.toml ~/.local/state/noctalia/settings.toml
 ln -sfn ~/dotfiles/vesktop/themes/*.theme.css ~/.config/vesktop/themes/
+mkdir -p ~/.config/zed
+ln -sfn ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
+ln -sfn ~/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
 
 # Arch - Mangowc
 for d in mango waybar rofi swaync swayosd swaylock; do

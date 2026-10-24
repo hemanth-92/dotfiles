@@ -118,10 +118,11 @@ export PATH="$HOME/.grok/bin:$PATH"
 [[ -r "$HOME/.grok/completions/bash/grok.bash" ]] && source "$HOME/.grok/completions/bash/grok.bash"
 # <<< grok installer <<<
 
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
-
 # fzf colors from Noctalia
 [ -f "$HOME/.config/fzf/themes/noctalia.sh" ] && . "$HOME/.config/fzf/themes/noctalia.sh"
 
-fastfetch -c examples/27
+#fastfetch -c examples/27
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
