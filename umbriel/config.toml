@@ -1,7 +1,7 @@
 # Umbriel configuration
 #
 # Install:  ln -s ~/dotfiles/umbriel ~/.config/umbriel
-# Validate: umbriel validate -c ~/dotfiles/umbriel/config.toml
+# Validate: umbriel config validate -c ~/dotfiles/umbriel/config.toml
 # Reload:   saving the file applies live (or `umbriel msg config-reload`)
 #
 # Docs: https://docs.noctalia.dev/umbriel/
@@ -122,7 +122,7 @@ follows_mouse_max_scroll = 0.7
 # ─────────────────────────────── Layout ─────────────────────────────────────
 
 [layout]
-mode = "scrolling" # default; toggle to dwindle with Mod+Ctrl+T
+mode = "scrolling" # default; Mod+Ctrl+T toggles stacking, Mod+Ctrl+M = master/stack
 gap = 1
 extent_presets = [0.33333, 0.5, 0.66667, 1.0]
 
@@ -137,6 +137,9 @@ default_extent_fraction = 0.66667
 center_underfull_strip = true
 center_focused = "never"
 
+# Every window floats; drag to an edge/corner (or Mod+drag) to snap a half/quarter
+[layout.stacking]
+drop_zones = true
 
 [layout.dwindle]
 preserve_split = false # true keeps split directions fixed after creation
@@ -148,29 +151,29 @@ preserve_split = false # true keeps split directions fixed after creation
 [keybinds]
 
 # Applications
-"Alt+Return" = "spawn:ghostty"
-"Mod+Return" = "spawn:ghostty --class=com.dusk.floatterm" # floating terminal (see window rule)
-"Mod+E" = "spawn:nautilus"
-"Mod+B" = "spawn:helium"
-"Mod+D" = "spawn:serein"
+"Alt+Return" = "spawn ghostty"
+"Mod+Return" = "spawn ghostty --class=com.dusk.floatterm" # floating terminal (see window rule)
+"Mod+E" = "spawn nautilus"
+"Mod+B" = "spawn helium"
+"Mod+D" = "spawn vesktop"
 
 # Core Noctalia binds
-"Alt+space" = "spawn:noctalia msg panel-toggle launcher"
-"Mod+S" = "spawn:noctalia msg panel-toggle control-center"
-"Mod+Comma" = "spawn:noctalia msg settings-toggle"
-"Alt+Tab" = "spawn:noctalia msg window-switcher"
-"Alt+L" = "spawn:noctalia msg panel-toggle session"
-"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+"Alt+space" = "spawn noctalia msg panel-toggle launcher"
+"Mod+S" = "spawn noctalia msg panel-toggle control-center"
+"Mod+Comma" = "spawn noctalia msg settings-toggle"
+"Alt+Tab" = "spawn noctalia msg window-switcher"
+"Alt+L" = "spawn noctalia msg panel-toggle session"
+"Mod+V" = "spawn noctalia msg panel-toggle clipboard"
 
 # Audio & brightness
-"XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up", allow_when_locked = true }
-"XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down", allow_when_locked = true }
-"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true }
-"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up", allow_when_locked = true }
-"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down", allow_when_locked = true }
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
 
 # Window & session
-"Mod+Q" = "window-close"
+"Mod+Q" = "window-kill"
 "Mod+O" = { action = "overview-toggle", repeat = false }
 "Mod+Shift+E" = "session-quit"
 
@@ -233,24 +236,24 @@ preserve_split = false # true keeps split directions fixed after creation
 "Mod+Ctrl+Shift+WheelUp" = "column-move-left"
 
 # Numbered workspaces
-"Mod+1" = "workspace-switch:1"
-"Mod+2" = "workspace-switch:2"
-"Mod+3" = "workspace-switch:3"
-"Mod+4" = "workspace-switch:4"
-"Mod+5" = "workspace-switch:5"
-"Mod+6" = "workspace-switch:6"
-"Mod+7" = "workspace-switch:7"
-"Mod+8" = "workspace-switch:8"
-"Mod+9" = "workspace-switch:9"
-"Mod+Shift+1" = "column-move-to-workspace:1"
-"Mod+Shift+2" = "column-move-to-workspace:2"
-"Mod+Shift+3" = "column-move-to-workspace:3"
-"Mod+Shift+4" = "column-move-to-workspace:4"
-"Mod+Shift+5" = "column-move-to-workspace:5"
-"Mod+Shift+6" = "column-move-to-workspace:6"
-"Mod+Shift+7" = "column-move-to-workspace:7"
-"Mod+Shift+8" = "column-move-to-workspace:8"
-"Mod+Shift+9" = "column-move-to-workspace:9"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+"Mod+Shift+1" = "column-move-to-workspace 1"
+"Mod+Shift+2" = "column-move-to-workspace 2"
+"Mod+Shift+3" = "column-move-to-workspace 3"
+"Mod+Shift+4" = "column-move-to-workspace 4"
+"Mod+Shift+5" = "column-move-to-workspace 5"
+"Mod+Shift+6" = "column-move-to-workspace 6"
+"Mod+Shift+7" = "column-move-to-workspace 7"
+"Mod+Shift+8" = "column-move-to-workspace 8"
+"Mod+Shift+9" = "column-move-to-workspace 9"
 
 # Columns & stacking
 "Mod+Bracketleft" = "window-consume-or-expel-left"
@@ -265,24 +268,42 @@ preserve_split = false # true keeps split directions fixed after creation
 "Mod+F" = "window-toggle-maximize"
 "Mod+Shift+F" = "window-toggle-fullscreen"
 "Mod+C" = "column-center"
-"Mod+Minus" = "window-modify-primary-extent:-0.1"
-"Mod+Equal" = "window-modify-primary-extent:0.1"
-"Mod+Shift+Minus" = "window-modify-secondary-extent:-0.1"
-"Mod+Shift+Equal" = "window-modify-secondary-extent:0.1"
+"Mod+Minus" = "window-modify-primary-extent -0.1"
+"Mod+Equal" = "window-modify-primary-extent 0.1"
+"Mod+Shift+Minus" = "window-modify-secondary-extent -0.1"
+"Mod+Shift+Equal" = "window-modify-secondary-extent 0.1"
 
 # Layout mode (per workspace)
-"Mod+Ctrl+T" = "workspace-set-layout:toggle"
-"Mod+Ctrl+D" = "workspace-set-layout:dwindle"
-"Mod+Ctrl+S" = "workspace-set-layout:scrolling"
+"Mod+Ctrl+T" = "workspace-set-layout toggle scrolling stacking"
+"Mod+Ctrl+D" = "workspace-set-layout dwindle"
+"Mod+Ctrl+S" = "workspace-set-layout scrolling"
+"Mod+Ctrl+M" = "workspace-set-layout master"
+"Mod+Ctrl+F" = "workspace-set-layout stacking"
+
+# Stacking: snap the window to a half (Mod+Alt+C restores its free position)
+"Mod+Alt+H" = "window-set-region left"
+"Mod+Alt+L" = "window-set-region right"
+"Mod+Alt+K" = "window-set-region top"
+"Mod+Alt+J" = "window-set-region bottom"
+"Mod+Alt+C" = "window-clear-region"
+
+# Minimize (floating windows, i.e. everything in stacking)
+"Mod+N" = "window-minimize"
+"Mod+Shift+N" = "window-restore-minimized"
+"Mod+Shift+D" = "workspace-toggle-show-desktop"
+
+# Master/stack: move windows between master and stack areas
+"Mod+Ctrl+Equal" = "layout-master-count-increase"
+"Mod+Ctrl+Minus" = "layout-master-count-decrease"
 
 # Floating
 "Mod+Shift+V" = "window-toggle-floating"
 "Mod+Ctrl+V" = "window-focus-switch-floating"
 
 # Screenshots (via Noctalia)
-"Print" = "spawn:noctalia msg screenshot-region"
-"Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen"
-"Alt+Print" = "spawn:noctalia msg screenshot-fullscreen pick"
+"Print" = "spawn noctalia msg screenshot-region"
+"Ctrl+Print" = "spawn noctalia msg screenshot-fullscreen"
+"Alt+Print" = "spawn noctalia msg screenshot-fullscreen pick"
 
 # ───────────────────────────── Window Rules ─────────────────────────────────
 

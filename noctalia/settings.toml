@@ -1,4 +1,4 @@
-config_version = 15
+config_version = 16
 
 [audio]
 enable_overdrive = true
@@ -28,7 +28,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -58,16 +58,15 @@ screen_time_enabled = true
 builtin = "Catppuccin"
 mode = "dark"
 source = "builtin"
-wallpaper_scheme = "m3-content"
 
 [wallpaper.automation]
 enabled = true
 
 [wallpaper.default]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/swirls.jpg"
 
 [wallpaper.last]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/swirls.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/dusk/Pictures/walls-catppuccin-mocha/night-forest-path.png"
+path = "/home/dusk/Pictures/walls-catppuccin-mocha/swirls.jpg"
